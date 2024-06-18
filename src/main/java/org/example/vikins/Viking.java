@@ -3,7 +3,7 @@ package org.example.vikins;
 import org.example.soldier.Soldier;
 
 public class Viking extends Soldier {
-    public String name;
+    public String name = "Harald";
     private String msg;
 
     public Viking(String name, int health, int strength) {

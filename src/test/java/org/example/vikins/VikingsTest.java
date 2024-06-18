@@ -5,13 +5,14 @@ import org.example.vikins.Viking;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class VikingTest {
     String name = "Harald";
     int strength = 150;
     int health = 300;
 
-    Viking viking = new Viking(name, health, strength);
+    Viking viking = new Viking(name, strength, health);
 
     @Test
     public void should_inherit_from_Soldier() {
@@ -20,11 +21,13 @@ class VikingTest {
 
     @Test
     public void should_receive_3_arguments() {
-        assertNotNull(viking);
+        assertEquals("Harald",viking.name);
+        assertEquals(150,viking.strength);
+        assertEquals(300, viking.health);
     }
 
     @Test
-    public void should_receive_the_health_property_as_its_1st_argument() {
+    public void should_receive_the_name_property_as_its_1st_argument() {
         assertEquals("Harald", viking.name);
     }
 
@@ -34,7 +37,7 @@ class VikingTest {
     }
 
     @Test
-    public void should_receive_the_health_property_as_its_3st_argument() {
+    public void should_receive_the_strength_property_as_its_3st_argument() {
         assertEquals(150, viking.strength);
     }
 

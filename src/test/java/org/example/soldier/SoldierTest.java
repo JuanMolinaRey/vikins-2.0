@@ -29,7 +29,6 @@ class SoldierTest {
     @Test
     public void attack_should_receive_0_arguments() {
         Soldier soldier = new Soldier(health, strength);
-        int damage = 50;
         int resultAttack = soldier.attack();
         assertEquals(this.strength, resultAttack);
     }
